@@ -1,0 +1,40 @@
+package {{.LayerLower}}
+
+type {{.EntityLower}}{{.LayerUpper}} struct {
+	{{.EntityLower}}{{.LayerUpper}} model.I{{.EntityUpper}}{{.LayerUpper}}
+}
+
+type I{{.EntityUpper}}{{.LayerUpper}} interface {
+	Create(ctx context.Context, {{.EntityLower}} model.{{.EntityUpper}}) error
+	GetAll(ctx context.Context) ([]model.{{.EntityUpper}}, error)
+	GetByID(ctx context.Context, id int) (model.{{.EntityUpper}}, error)
+	Update(ctx context.Context, {{.EntityLower}} model.{{.EntityUpper}}) error
+	Delete(ctx context.Context, id int) error
+}
+
+// New{{.EntityUpper}}{{.LayerUpper}} creates a new instance of I{{.EntityUpper}}{{.LayerUpper}}
+func New{{.EntityUpper}}{{.LayerUpper}}({{.EntityLower}}{{.LayerUpper}} model.I{{.EntityUpper}}{{.LayerUpper}}) I{{.EntityUpper}}{{.LayerUpper}} {
+	return &{{.EntityLower}}{{.LayerUpper}}{
+		{{.EntityLower}}{{.LayerUpper}}: {{.EntityLower}}{{.LayerUpper}},
+	}
+}
+
+func (u *{{.EntityLower}}{{.LayerUpper}}) Create(ctx context.Context, {{.EntityLower}} model.{{.EntityUpper}}) error {
+	return u.{{.EntityLower}}{{.LayerUpper}}.Create(ctx, {{.EntityLower}})
+}
+
+func (u *{{.EntityLower}}{{.LayerUpper}}) GetAll(ctx context.Context) ([]model.{{.EntityUpper}}, error) {
+	return u.{{.EntityLower}}{{.LayerUpper}}.GetAll(ctx)
+}
+
+func (u *{{.EntityLower}}{{.LayerUpper}}) GetByID(ctx context.Context, id int) (model.{{.EntityUpper}}, error) {
+	return u.{{.EntityLower}}{{.LayerUpper}}.GetByID(ctx, id)
+}
+
+func (u *{{.EntityLower}}{{.LayerUpper}}) Update(ctx context.Context, {{.EntityLower}} model.{{.EntityUpper}}) error {
+	return u.{{.EntityLower}}{{.LayerUpper}}.Update(ctx, {{.EntityLower}})
+}
+
+func (u *{{.EntityLower}}{{.LayerUpper}}) Delete(ctx context.Context, id int) error {
+	return u.{{.EntityLower}}{{.LayerUpper}}.Delete(ctx, id)
+}
