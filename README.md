@@ -11,14 +11,17 @@ go install github.com/alramdein/goarch@latest
 ```
 
 ## Usage
-1. **Initialize Configuration**  
+1. **Initialize Configuration**
+   
     Run the command to create the initial configuration:
     ```bash
     goarch init
     ```
-2. **Customize**
+3. **Customize**
+   
     Edit the generated configuration file (e.g., `goarch.yaml`) as needed.
-3. Generate Project
+4. **Generate Project**
+   
     Generate the project structure by running: 
     ```
     goarch generate
