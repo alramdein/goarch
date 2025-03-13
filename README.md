@@ -11,20 +11,18 @@ go install github.com/alramdein/goarch@latest
 ```
 
 ## Usage
-```
-Usage:
-  goarch [flags]
-  goarch [command]
-
-Available Commands:
-  completion  Generate the autocompletion script for the specified shell
-  generate    Generate project structure based on goarch.yaml
-  help        Help about any command
-  init        Initialize goarch.yaml
-
-Flags:
-  -h, --help   help for goarch
-```
+1. **Initialize Configuration**  
+    Run the command to create the initial configuration:
+    ```bash
+    goarch init
+    ```
+2. **Customize**
+    Edit the generated configuration file (e.g., `goarch.yaml`) as needed.
+3. Generate Project
+    Generate the project structure by running: 
+    ```
+    goarch generate
+    ```
 
 ## License
 
