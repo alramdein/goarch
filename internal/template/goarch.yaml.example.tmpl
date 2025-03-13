@@ -1,0 +1,24 @@
+version: 1
+output_path: "."
+content:
+  entities:
+    - user:
+        methods:
+          - name: default_crud
+          - name: getUserByEmail
+            params: 
+              ctx: context.Context
+              email: string
+              password: string
+            returns:
+              user: model.User
+              err: error
+    - product:
+        methods:
+          - name: default_crud
+  layers:
+    - handler
+    - usecase
+    - repository
+  
+  
