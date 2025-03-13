@@ -10,6 +10,12 @@ You can install `goarch` using the following command:
 go install github.com/alramdein/goarch@latest
 ```
 
+or via homebrew:
+```bash
+brew tap alramdein/goarch
+brew install goarch
+```
+
 ## Usage
 1. **Initialize Configuration**
    
